@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  CSS File -->
+    <link rel="stylesheet" href="assets/CSS/Style.css">
+
+    <!-- External Font CSS File -->
+    <link rel="stylesheet" href="assets/FONTS/style_Avenir-Book.css">
+    <link rel="stylesheet" href="assets/FONTS/style_GeorgiaPro-CondLight.css">
+    <link rel="stylesheet" href="assets/FONTS/style_TTWellingtons-DemiBold.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- font  JS File -->
+    <script src="https://kit.fontawesome.com/a3f3dcd93e.js" crossorigin="anonymous"></script>
+    
+    <!-- carousel CSS & JS File -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <title>Recipe Card</title>
+</head>
+<body>
+    <div class="continer">
+        <div class="section_01">
+            <nav class="nav_con">
+                    <a href="#" class="subcribe-con-a gap"><span id="subcribe-text">Subscribe</span></a>
+                    <div class="search-con gap">
+                        <input type="text" class="search_input gap" value="text" placeholder="Type Here" id="search_input" aria-label="Search" onfocus="this.value=''">
+                        <button class="btn-con" id="search_btn">
+                            <i class="fa-solid fa-magnifying-glass" aria-label="Submit Button"></i>
+                        </button>
+                    </div>
+                    <span class="toggle_ ">
+                        <i class="bi bi-filter-right"></i>
+                    </span>
+                    <div class="Menu-con flex_col-menu">
+                        <div class="logo"><span>Recipe Card</span></div>
+                        <span class="toggle_menu toggle-">
+                            <i class="bi bi-filter-left"></i>
+                        </span>
+                        <div class="social-bar">
+                            <ul>
+                              <li>
+                                <a href="https://facebook.com">
+                                  <img src="assets/IMGS/facebook.png" target="_blank" alt="" />
+                                </a>
+                              </li>
+                              <li>
+                                <a href="https://twitter.com">
+                                  <img src="assets/IMGS/twitter.png" target="_blank" alt="" />
+                                </a>
+                              </li>
+                              <li>
+                                <a href="https://instagram.com">
+                                  <img src="assets/IMGS/instagram.png" target="_blank" alt="" />
+                                </a>
+                              </li>
+                            </ul>
+                        </div>
+                        <div class="menu-card">
+                            <ul>
+                                <li><a>Home</a></li>
+                                <li><a>Favorite</a></li>
+                                <li><a>Settings</a></li>
+                                <li><a>more..</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </nav>
+
+            <div class="flex_img_text">
+                <div class="Hero_img">
+                    <img src="assets/IMGS/02.png" alt="Hero img">
+                </div>
+                <div class="flex_col">
+                    <h1 class="hero_text">Vegan Ramen</h1>
+                    <div class="rating_con">
+                        <div class="reting_bar_con">
+                            <fieldset class="rating"> <input type="radio" id="star5" name="rating" value="5" />
+                                <label class="full" for="star5" title="Awesome - 5 stars"></label>
+                                <input type="radio" id="star4half" name="rating" value="4.5" />
+
+                                <label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                                <input type="radio" id="star4" name="rating" value="4" />
+
+                                <label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                                <input type="radio" id="star3half" name="rating" value="3.5" />
+
+                                <label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                                <input type="radio" id="star3" name="rating" value="3" />
+
+                                <label class="full" for="star3" title="Meh - 3 stars"></label>
+                                <input type="radio" id="star2half" name="rating" value="2.5" />
+
+                                <label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                                <input type="radio" id="star2" name="rating" value="2" />
+                        
+                                <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                                 <input type="radio" id="star1half" name="rating" value="1.5" />
+
+                                 <label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                                 <input type="radio" id="star1" name="rating" value="1" />
+                                 
+                                 <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                                 <input type="radio" id="starhalf" name="rating" value="0.5" />
+                        
+                                 <label class="half" for="starhalf" title="Sucks big time - 0.5 stars">
+                                 </label> <input type="radio" class="reset-option" name="rating" value="reset" /> </fieldset>
+                        
+                        </div>
+                        <span class="rating_text"> 34 of 5</span>
+                    </div>
+
+                    <div class="para">
+                        <p>
+                            Easiest way to make healthy happy breakfast
+                            for you and whole your family and eat it
+                            the wole day even on holiday
+                        </p>
+                    </div>
+                    <div class="meal_detail_con">
+                        <table>
+                            <tr>
+                                <td>
+                                    <span class="num">40</span>
+                                    <span class="text_">mins</span>
+                                </td>
+                                <td class="dash"><span class="fa-pipee"><img src="assets/ICONS/SVG/003.svg" alt=""></span></td>
+                                <td>
+                                    <span class="num">225</span>
+                                    <span class="text_">nutrition</span>
+                                </td>
+                                <td class="dash"><span class="fa-pipee"><img src="assets/ICONS/SVG/003.svg" alt=""></span></td>
+                                <td>
+                                    <span class="num">6</span>
+                                    <span class="text_">ingredients</span>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="slider_con">
+                        <div class="text_con">
+                            <h3> New recipes </h3>
+                        </div>
+                        <div class="carousel">
+                            <div class="carousel-cell">
+                              <img class="images" src="assets/IMGS/s01.png" alt="orange tree" />
+                            </div>
+                            <div class="carousel-cell">
+                              <img class="images" src="assets/IMGS/s02.png" alt="One World Trade" />
+                            </div>
+                            <div class="carousel-cell">
+                              <img class="images" src="assets/IMGS/s03.png" alt="drizzle" />
+                            </div>
+                        </div>
+                    </div>   
+            </div> 
+        </div> 
+    </div>
+
+    
+    
+    
+<!--  JS File -->
+<script src="assets/JS/Main.js"></script>
+</body>
+ 
+ 
+
+</html>

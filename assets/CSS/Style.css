@@ -1,0 +1,516 @@
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root{
+    --search-color-light: rgba(222, 254, 228, 0.2);
+    --rating-star-uncheckd:#dbdbdb;
+    --rating-star-coloer-checkd:#eca22f;
+}
+html{
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+/*--------------------------------------------------------------
+# 
+--------------------------------------------------------------*/
+.continer{
+    width: 85vw;
+    margin: 0 auto;   
+
+}
+
+.section_01{
+    box-shadow: 2px 2px 3em rgba(28, 30, 28, 0.2);
+    background-color: white;
+    background: linear-gradient(to top,rgb(246, 245, 246), rgb(255, 255, 255));
+    width: 100%;
+    min-width: 275px;
+    max-width: 1200px;
+    margin: 10vh auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    
+}
+/*--------------------------------------------------------------
+# navigation bar
+--------------------------------------------------------------*/
+.nav_con{
+    background-color: white;
+    display: flex;
+    min-width: 275px;
+    width: 100%;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: baseline;  
+    overflow: hidden;
+    padding: 1em 1em;
+}
+/*subcribe link*/
+.subcribe-con-a{
+    text-decoration: none;
+    color: black;
+    margin-right: 2em;
+    flex-flow: 1 1 100%;
+}
+#subcribe-text{
+    font-size: 1em;
+    font-family: 'TT Wellingtons';
+}
+/* search bar*/
+.search-con{
+    display: flex;
+    width: 3em;
+    border-radius: 2em;
+    background:transparent;
+    transition: width 250ms ease-in-out;
+    margin-right: 2em;
+}
+.search-con:focus{
+    outline: 0;
+}
+.search-con:focus-within
+{
+    box-shadow: 2px 2px 3em rgba(28, 30, 28, 0.165);
+    width: 12em;
+}
+
+.search-con:focus > .search_input{
+    outline: 0;
+}
+.search-con:focus-within  > .search_input
+{
+   
+    width: 11em;
+    margin-right: 0em;
+}
+.search-con:focus-within  > .subcribe-con-a 
+{
+    margin-right: 0em;
+}
+.search_input{
+    width: 0em;
+    padding-left: 1em;
+    border: none;
+    border-radius: 2em;
+    font-family: 'TT Wellingtons';
+    line-height: 0.8em;
+    background:transparent;
+    transition: width 300ms ease-in-out;
+    outline:#eba22b;
+}
+.btn-con{
+    width: 2em;
+    height: 2em;
+    background-color:transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+/* menu toggle*/
+.toggle_{
+    display:flex;
+    justify-self:center;
+    align-self:center;
+    font-size: 2.5rem;
+    padding: 0;
+}
+.toggle_ i:hover{
+    cursor:pointer;
+}
+/**/
+/*--------------------------------------------------------------
+# flex hero img & text continer
+--------------------------------------------------------------*/
+/* */
+.flex_img_text{
+    background-color: white;
+    background: linear-gradient(to top,rgb(246, 245, 246), rgb(255, 255, 255));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    align-content: flex-start;   
+}
+/*--------------------------------------------------------------
+# Hero IMG
+--------------------------------------------------------------*/
+/*hero continer*/
+.Hero_img{
+    min-width: 17.5em;
+    width: 100%;
+    height: 100%;
+    flex: 51%;  
+}
+/**/
+.Hero_img img{
+    vertical-align: bottom;
+    min-width: 17.5em;
+    max-width: 39em;
+    width: 100%;
+    padding-top: 10px;
+}
+/*--------------------------------------------------------------
+# Hero text
+--------------------------------------------------------------*/
+/**/
+.flex_col{
+    display: flex;
+    flex-flow: column;
+    padding: 0 0.5em;
+    flex: 49%;
+    min-width: 17.5em;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+/*Hero header*/
+.hero_text{
+    font-family: 'Georgia Pro';
+    font-size: 4rem;
+    padding-left: 1rem;
+    letter-spacing: 0.1rem;
+}
+/*rating text*/
+.rating_text{
+    font-family: 'Avenir';
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.rating_con{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    align-content: center;
+}
+
+/**/
+.para{
+    max-width: 21em;
+    font-family: 'Avenir';
+    padding-left: 1rem;
+}
+/*--------------------------------------------------------------
+# Menu toggle
+--------------------------------------------------------------*/
+.Menu-con.active{
+    position:absolute;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 2px 2px 3em rgba(28, 30, 28, 0.2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: flex-end;
+    align-self: flex-start;
+    z-index: 100;    
+}
+.Menu-con{
+    width: 0%;
+    height: 100%;
+    position:absolute;
+    z-index: -100;
+    transition: 500ms ease-in-out;
+}
+.flex_col-menu{
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+}
+.toggle_menu{ 
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-self: flex-end;
+    align-self: flex-end;
+    font-size: 2.5rem;
+    padding: 0;
+    padding: 0.5rem 0.5rem;
+}
+.toggle_menu i{ 
+    cursor: pointer;
+}
+.menu-card{
+   width: 100%;
+   margin: 8em auto 0em auto; 
+   
+}
+.menu-card ul li {
+    font-size: 1.5rem;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.5em;
+    margin: auto 3rem;  
+}
+.menu-card ul li a:hover {
+   font-size: 1.1em;
+}
+a{
+    cursor:pointer;
+}
+/* socal links-------*/
+.social-bar {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 100;
+  }
+  .social-bar ul {
+    list-style: none;
+  }
+  .social-bar ul li{
+    text-align: center;
+}
+  .social-bar a {
+    display: inline-block;
+    transform: scale(0.5);
+  }
+  /* socal links-------*/
+  .logo{
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: flex;
+    top: 0;
+    left: 0;
+    margin: 1rem 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'TT Wellingtons';
+  }
+/*--------------------------------------------------------------
+# rating ber
+--------------------------------------------------------------*/
+/**/
+.rating {
+    border: none;
+    
+}
+.rating>[id^="star"] {
+    display: none;
+}
+.rating>label:before {
+    margin-left: 5px;
+    font-size: 1em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+    
+}
+
+.rating>.half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating>label {
+    color: #ddd;
+    float: right;
+}
+
+.rating>[id^="star"]:checked~label,
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: #FFD700;
+}
+
+.rating>[id^="star"]:checked+label:hover,
+.rating>[id^="star"]:checked~label:hover,
+.rating>label:hover~[id^="star"]:checked~label,
+.rating>[id^="star"]:checked~label:hover~label {
+    color: #FFED85;
+}
+
+.reset-option {
+    display: none;
+}
+
+.reset-button {
+    background-color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+.btn:focus {
+    outline: none;
+}
+.btn {
+    border-radius: 22px;
+    text-transform: capitalize;
+    font-size: 13px;
+    padding: 0px 0px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #D50000;
+}
+
+.btn:hover {
+    background-color: #D32F2F !important;
+}
+.reset-option {
+    display: none;
+}
+/*--------------------------------------------------------------
+# image slider continer
+--------------------------------------------------------------*/
+/* image slider continer*/
+.slider_con{
+    position: relative;
+    max-width: 27em;
+    min-width: 22em;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+/*text*/
+.slider_con h3{
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+h3 {
+    font-family: 'Avenir';
+    letter-spacing: 0.05rem;
+    font-size: 0.9em;
+    position: absolute;
+    vertical-align:middle;
+    text-align:end;
+    font-weight: bold;
+}
+.text_con {
+    position:absolute;
+    height: 8rem;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    margin-left: 0.8rem;
+}
+
+/*--------------------------------------------------------------
+# image slider 
+--------------------------------------------------------------*/
+/**/
+.carousel {
+    position: absolute;
+    max-height: 8rem;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    scale: 70%;
+    margin:0;
+   left: -30px;
+   padding-left: 10px;
+  }
+  
+  .carousel-cell {
+    padding: 0 1rem;
+    margin: 0 1rem;
+  }
+  
+  .carousel-cell img {
+    display: block;
+    max-width: 20rem;
+  }
+  .images{
+    aspect-ratio: 16/9;
+    max-width: 4rem;
+    max-height: 8rem;
+  }
+/*--------------------------------------------------------------
+# meal details
+--------------------------------------------------------------*/
+.meal_detail_con{
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+.meal_detail_con table tr td{
+    
+    width: 3em;
+}
+.meal_detail_con table tr td span{
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    font-family: 'Avenir';
+}
+.num{
+    font-size: 1.5rem;
+}
+.dash span i{
+    color: black;
+}
+/**/
+/**/
+.fa-pipee img{
+    width: 0.13rem;
+    align-self: center;
+}
+/**/
+
+@media screen and ( min-width: 768px ) {
+    .carousel {
+        left: -10px;
+    }
+}
+
+/**/
+
+@media (min-width: 600px) {
+    .Menu-con.active{
+        height: 80vh;
+    }
+    .carousel {
+        left: -10px;
+    }
+    .slider_con{
+        
+        min-width: none;
+        
+    }
+    
+}
+@media (min-width: 200px) {
+    .Menu-con.active{
+        height: 80vh;
+    }
+    .carousel {
+        left: -10px;
+    }
+    .slider_con{
+        
+        min-width: none;
+        
+    }
+    
+}
