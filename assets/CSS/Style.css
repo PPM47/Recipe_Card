@@ -33,7 +33,7 @@ body{
     width: 100%;
     min-width: 275px;
     max-width: 1200px;
-    margin: 10vh auto;
+    margin: 2vh auto;
     overflow: hidden;
     position: relative;
     z-index: 10;
