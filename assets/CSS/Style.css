@@ -207,6 +207,7 @@ body{
     max-width: 21em;
     font-family: 'Avenir';
     padding-left: 1rem;
+    line-height: 1rem;
 }
 /*--------------------------------------------------------------
 # Menu toggle
